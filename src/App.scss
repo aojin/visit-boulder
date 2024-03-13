@@ -1,0 +1,319 @@
+h1 {
+  font-size: 3em;
+  color: #fdf9f5;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-landing {
+  height: 95vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.hero-header-bar {
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  padding: 24px;
+}
+
+.hero-header-nav-list {
+  font-size: 14px;
+  list-style: none;
+
+  display: flex;
+  gap: 24px;
+
+  margin-right: 36px;
+
+  & a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fdf9f5;
+  }
+}
+
+.landing-header {
+  color: #fdf9f5;
+
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 48px;
+  padding-right: 24px;
+  background-color: #edc79b53;
+
+  margin-bottom: 24px;
+}
+
+.landing-heading-container {
+  animation: move-up-600 auto linear;
+  animation-timeline: scroll(root block);
+  animation-range: 5vh 100vh;
+
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 86px;
+}
+
+.hero-cta {
+  z-index: 10;
+  color: #fdf9f5;
+  background-color: #007562;
+  padding: 12px 24px;
+  border: 1px solid #007562;
+  border-radius: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 4px;
+  margin-left: 42px;
+
+  cursor: pointer;
+  /* BG 1 */
+}
+
+.align-right {
+  align-self: flex-end;
+}
+
+// LAYERED IMAGES
+
+.hero-image {
+  z-index: 0;
+  position: absolute;
+  height: 95vh;
+  width: 100%;
+  object-fit: cover;
+
+  top: 0;
+  left: 0;
+}
+
+.full-image {
+  animation: move-up-650 auto linear;
+  animation-timeline: scroll(root block);
+  animation-range: 0 90vh;
+}
+
+.background-layer {
+  animation: move-up-400 auto linear;
+  animation-timeline: scroll(root block);
+  animation-range: 15vh 100vh;
+}
+
+.secondary-midground-layer {
+  &--landing1 {
+    animation: move-up-500 auto linear;
+    animation-timeline: scroll(root block);
+    animation-range: 15vh 100vh;
+  }
+
+  &--landing2 {
+    animation: move-up-500 auto linear;
+    animation-timeline: scroll(root block);
+    animation-range: 5vh 98vh;
+  }
+}
+.midground-layer {
+  &--landing1 {
+    animation: move-up-600 auto linear;
+    animation-timeline: scroll(root block);
+    animation-range: 10vh 90vh;
+  }
+
+  &--landing2 {
+    animation: move-up-650 auto linear;
+    animation-timeline: scroll(root block);
+    animation-range: 0vh 96vh;
+  }
+}
+.foreground-layer {
+  z-index: 5;
+  &--landing1 {
+    animation: move-up-650 auto linear;
+    animation-timeline: scroll(root block);
+    animation-range: 0vh 90vh;
+  }
+
+  &--landing2 {
+    animation: move-up-600 auto linear;
+    animation-timeline: scroll(root block);
+    animation-range: 2vh 90vh;
+  }
+}
+
+.content {
+  height: 100%;
+  padding: 18px 36px;
+
+  &--landing1 {
+    background-color: #e6eae5;
+    animation: move-up-650 auto linear;
+    animation-timeline: scroll(root block);
+    animation-range: 0vh 90vh;
+  }
+
+  &--landing2 {
+    background-color: #fdf9f5;
+    animation: move-up-600 auto linear;
+    animation-timeline: scroll(root block);
+    animation-range: 2vh 90vh;
+  }
+}
+
+.feature-area {
+  height: 600px;
+}
+
+// ANIMATIONS
+
+.paused-element {
+  animation-play-state: paused !important;
+}
+
+@keyframes move-up-400 {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(0, -400px);
+  }
+}
+
+@keyframes move-up-500 {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(0, -500px);
+  }
+}
+
+@keyframes move-up-600 {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(0, -600px);
+  }
+}
+
+@keyframes move-up-650 {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(0, -650px);
+  }
+}
+
+/**
+      * Basic CSS Media Query Template
+      * ------------------------------------------
+      *  Responsive Grid Media Queries - 1280, 1024, 768, 480
+      *   1280-1024   - desktop (default grid)
+      *   1024-768    - tablet landscape
+      *   768-480     - tablet
+      *   480-less    - phone landscape & smaller
+      * --------------------------------------------
+      */
+
+@media all and (min-width: 1280px) {
+  h1 {
+    font-size: 4.2rem;
+  }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .landing-header {
+    padding-left: 24px;
+  }
+
+  .hero-cta {
+    margin-left: 16px;
+    letter-spacing: 2px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .landing-header {
+    padding-left: 12px;
+  }
+
+  .hero-cta {
+    margin-left: 16px;
+    letter-spacing: normal;
+  }
+}
+
+/* Portrait */
+@media screen and (orientation: portrait) {
+  /* Portrait styles here */
+}
+/* Landscape */
+@media screen and (orientation: landscape) {
+  /* Landscape styles here */
+}
+
+/* CSS for iPhone, iPad, and Retina Displays */
+
+/* Non-Retina */
+@media screen and (-webkit-max-device-pixel-ratio: 1) {
+}
+
+/* Retina */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (min--moz-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5) {
+}
+
+/* iPhone Portrait */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+}
+
+/* iPhone Landscape */
+@media screen and (max-device-width: 480px) and (orientation: landscape) {
+}
+
+/* iPad Portrait */
+@media screen and (min-device-width: 481px) and (orientation: portrait) {
+}
+
+/* iPad Landscape */
+@media screen and (min-device-width: 481px) and (orientation: landscape) {
+}
