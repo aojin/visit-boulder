@@ -117,12 +117,14 @@ h1 {
 }
 
 .full-image {
+  -webkit-animation: move-up-650 auto linear;
   animation: move-up-650 auto linear;
   animation-timeline: scroll(root block);
   animation-range: 0 90vh;
 }
 
 .background-layer {
+  -webkit-animation: move-up-400 auto linear;
   animation: move-up-400 auto linear;
   animation-timeline: scroll(root block);
   animation-range: 15vh 100vh;
@@ -130,12 +132,14 @@ h1 {
 
 .secondary-midground-layer {
   &--landing1 {
+    -webkit-animation: move-up-500 auto linear;
     animation: move-up-500 auto linear;
     animation-timeline: scroll(root block);
     animation-range: 15vh 100vh;
   }
 
   &--landing2 {
+    -webkit-animation: move-up-500 auto linear;
     animation: move-up-500 auto linear;
     animation-timeline: scroll(root block);
     animation-range: 5vh 98vh;
@@ -143,12 +147,14 @@ h1 {
 }
 .midground-layer {
   &--landing1 {
+    -webkit-animation: move-up-600 auto linear;
     animation: move-up-600 auto linear;
     animation-timeline: scroll(root block);
     animation-range: 10vh 90vh;
   }
 
   &--landing2 {
+    -webkit-animation: move-up-650 auto linear;
     animation: move-up-650 auto linear;
     animation-timeline: scroll(root block);
     animation-range: 0vh 96vh;
@@ -157,12 +163,14 @@ h1 {
 .foreground-layer {
   z-index: 5;
   &--landing1 {
+    -webkit-animation: move-up-650 auto linear;
     animation: move-up-650 auto linear;
     animation-timeline: scroll(root block);
     animation-range: 0vh 90vh;
   }
 
   &--landing2 {
+    -webkit-animation: move-up-600 auto linear;
     animation: move-up-600 auto linear;
     animation-timeline: scroll(root block);
     animation-range: 2vh 90vh;
@@ -175,6 +183,7 @@ h1 {
 
   &--landing1 {
     background-color: #e6eae5;
+    -webkit-animation: move-up-650 auto linear;
     animation: move-up-650 auto linear;
     animation-timeline: scroll(root block);
     animation-range: 0vh 90vh;
@@ -182,6 +191,7 @@ h1 {
 
   &--landing2 {
     background-color: #fdf9f5;
+    -webkit-animation: move-up-600 auto linear;
     animation: move-up-600 auto linear;
     animation-timeline: scroll(root block);
     animation-range: 2vh 90vh;
@@ -198,55 +208,91 @@ h1 {
   animation-play-state: paused !important;
 }
 
+@-webkit-keyframes move-up-400 {
+  from {
+    -webkit-transform: translate(0, 0);
+
+    transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(0, -400px);
+
+    transform: translate(0, -400px);
+  }
+}
+
 @keyframes move-up-400 {
   from {
     transform: translate(0, 0);
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
   }
   to {
     transform: translate(0, -400px);
-    -webkit-transform: translate(0, -400px);
-    -ms-transform: translate(0, -400px);
+  }
+}
+
+@-webkit-keyframes move-up-500 {
+  from {
+    -webkit-transform: translate(0, 0);
+
+    transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(0, -500px);
+
+    transform: translate(0, -500px);
   }
 }
 
 @keyframes move-up-500 {
   from {
     transform: translate(0, 0);
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
   }
   to {
     transform: translate(0, -500px);
-    -webkit-transform: translate(0, -500px);
-    -ms-transform: translate(0, -500px);
+  }
+}
+
+@-webkit-keyframes move-up-600 {
+  from {
+    -webkit-transform: translate(0, 0);
+
+    transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(0, -600px);
+
+    transform: translate(0, -600px);
   }
 }
 
 @keyframes move-up-600 {
   from {
     transform: translate(0, 0);
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
   }
   to {
     transform: translate(0, -600px);
-    -webkit-transform: translate(0, -600px);
-    -ms-transform: translate(0, -600px);
+  }
+}
+
+@-webkit-keyframes move-up-650 {
+  from {
+    -webkit-transform: translate(0, 0);
+
+    transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(0, -650px);
+
+    transform: translate(0, -650px);
   }
 }
 
 @keyframes move-up-650 {
   from {
     transform: translate(0, 0);
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
   }
   to {
     transform: translate(0, -650px);
-    -webkit-transform: translate(0, -650px);
-    -ms-transform: translate(0, -650px);
   }
 }
 
