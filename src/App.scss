@@ -206,8 +206,8 @@ h1 {
   }
   to {
     transform: translate(0, -400px);
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, -400px);
+    -ms-transform: translate(0, -400px);
   }
 }
 
@@ -219,8 +219,8 @@ h1 {
   }
   to {
     transform: translate(0, -500px);
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, -500px);
+    -ms-transform: translate(0, -500px);
   }
 }
 
@@ -232,8 +232,8 @@ h1 {
   }
   to {
     transform: translate(0, -600px);
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, -600px);
+    -ms-transform: translate(0, -600px);
   }
 }
 
@@ -245,8 +245,8 @@ h1 {
   }
   to {
     transform: translate(0, -650px);
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, -650px);
+    -ms-transform: translate(0, -650px);
   }
 }
 
