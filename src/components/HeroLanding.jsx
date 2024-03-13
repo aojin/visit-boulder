@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import exact from "prop-types-exact";
 import "react-toggle/style.css";
 import Toggle from "react-toggle";
+import MenuDropdown from "./MenuDropdown";
 
 const propTypes = {
   landingOptions: PropTypes.object.isRequired,
@@ -22,7 +23,7 @@ function HeroLanding({ landingOptions, paused }) {
           height="125"
           alt="boulder city logo"
         />
-        <nav className="hero-header-nav">
+        {/* <nav className="hero-header-nav">
           <ol className="hero-header-nav-list">
             <li>
               <a href="#">About Boulder</a>
@@ -43,7 +44,24 @@ function HeroLanding({ landingOptions, paused }) {
               <a href="#">Travel Info</a>
             </li>
           </ol>
-        </nav>
+        </nav> */}
+        <MenuDropdown />
+        <button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 9h16.5m-16.5 6.75h16.5"
+            />
+          </svg>
+        </button>
       </header>
       <div
         className={classnames(

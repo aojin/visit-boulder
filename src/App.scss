@@ -23,6 +23,18 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  button {
+    cursor: pointer;
+    background-color: transparent;
+    margin-right: 32px;
+    border: none;
+  }
+
+  svg {
+    width: 32px;
+    stroke: #fff;
+  }
 }
 
 .logo {
@@ -189,36 +201,52 @@ h1 {
 @keyframes move-up-400 {
   from {
     transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
   }
   to {
     transform: translate(0, -400px);
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
   }
 }
 
 @keyframes move-up-500 {
   from {
     transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
   }
   to {
     transform: translate(0, -500px);
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
   }
 }
 
 @keyframes move-up-600 {
   from {
     transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
   }
   to {
     transform: translate(0, -600px);
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
   }
 }
 
 @keyframes move-up-650 {
   from {
     transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
   }
   to {
     transform: translate(0, -650px);
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
   }
 }
 
