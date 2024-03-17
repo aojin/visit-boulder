@@ -53,6 +53,16 @@ function App() {
   const random = Math.floor(Math.random() * numLandings);
 
   useEffect(() => {
+    const script = document.createElement("script");
+
+    script.src =
+      "https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+  });
+
+  useEffect(() => {
     setLandingOptions(getLandingOptions(random));
     setLoading(false);
   }, [random]);
