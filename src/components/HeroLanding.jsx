@@ -14,6 +14,64 @@ const propTypes = {
 const defaultProps = {};
 
 function HeroLanding({ landingOptions, paused }) {
+  // flackr polyfill requires inline styles
+
+  const fullImageInlineStyle = {
+    //  -webkitAnimation: move-up-650 auto linear;
+    animation: `move-up-650 auto linear`,
+    animationTimeline: `scroll(root block)`,
+    animationRange: `0 90vh`,
+  };
+
+  const backgroundLayerInlineStyle = {
+    animation: `move-up-400 auto linear`,
+    animationTimeline: `scroll(root block)`,
+    animationRange: `15vh 100vh`,
+  };
+
+  const secondaryMidgroundLayer = {
+    [`&--landing1`]: {
+      animation: `move-up-500 auto linear`,
+      animationTimeline: `scroll(root block)`,
+      animationRange: ` 15vh 100vh`,
+    },
+
+    [`&--landing2`]: {
+      animation: `move-up-500 auto linear`,
+      animationTimeline: `scroll(root block)`,
+      animationRange: `5vh 98vh`,
+    },
+  };
+
+  const midgroundLayer = {
+    [`&--landing1`]: {
+      animation: `move-up-600 auto linear`,
+      animationTimeline: `scroll(root block)`,
+      animationRange: `10vh 90vh`,
+    },
+
+    [`&--landing2`]: {
+      animation: `move-up-650 auto linear`,
+      animationTimeline: `scroll(root block)`,
+      animationRange: `0vh 96vh`,
+    },
+  };
+
+  const foregroundLayer = {
+    zIndex: 5,
+    [`&--landing1`]: {
+      animation: `move-up-650 auto linear`,
+      animationTimeline: `scroll(root block)`,
+      animationRange: `0vh 90vh`,
+    },
+
+    [`&--landing2`]: {
+      animation: `move-up-600 auto linear`,
+      animationTimeline: `scroll(root block)`,
+      animationRange: `2vh 90vh`,
+    },
+  };
+
   return (
     <section className="hero-landing">
       <header className="hero-header-bar">
@@ -23,28 +81,6 @@ function HeroLanding({ landingOptions, paused }) {
           height="125"
           alt="boulder city logo"
         />
-        {/* <nav className="hero-header-nav">
-          <ol className="hero-header-nav-list">
-            <li>
-              <a href="#">About Boulder</a>
-            </li>
-            <li>
-              <a href="#">Things To Do</a>
-            </li>
-            <li>
-              <a href="#">Outdoors</a>
-            </li>
-            <li>
-              <a href="#">Food & Drink</a>
-            </li>
-            <li>
-              <a href="#">Events</a>
-            </li>
-            <li>
-              <a href="#">Travel Info</a>
-            </li>
-          </ol>
-        </nav> */}
         <MenuDropdown />
         <button>
           <svg
@@ -89,6 +125,7 @@ function HeroLanding({ landingOptions, paused }) {
                 "paused-element": paused,
               }
             )}
+            style={fullImageInlineStyle}
             src={landingOptions.fullImg}
             alt="Original bg image full size"
           />
@@ -105,6 +142,7 @@ function HeroLanding({ landingOptions, paused }) {
             )}
             src={landingOptions.backgroundImg}
             alt="background layer"
+            style={backgroundLayerInlineStyle}
           />
         )}
         {landingOptions && landingOptions.midground2Img && (
@@ -119,6 +157,7 @@ function HeroLanding({ landingOptions, paused }) {
             )}
             src={landingOptions.midground2Img}
             alt="secondary background layer"
+            style={secondaryMidgroundLayer}
           />
         )}
         {landingOptions && landingOptions.midground1Img && (
@@ -133,6 +172,7 @@ function HeroLanding({ landingOptions, paused }) {
             )}
             src={landingOptions.midground1Img}
             alt="midground layer"
+            style={midgroundLayer}
           />
         )}
         {landingOptions && landingOptions.foregroundImg && (
@@ -147,6 +187,7 @@ function HeroLanding({ landingOptions, paused }) {
             )}
             src={landingOptions.foregroundImg}
             alt="foreground layer"
+            style={foregroundLayer}
           />
         )}
       </div>
@@ -158,3 +199,28 @@ HeroLanding.propTypes = exact(propTypes);
 HeroLanding.defaultProps = defaultProps;
 
 export default HeroLanding;
+
+{
+  /* <nav className="hero-header-nav">
+          <ol className="hero-header-nav-list">
+            <li>
+              <a href="#">About Boulder</a>
+            </li>
+            <li>
+              <a href="#">Things To Do</a>
+            </li>
+            <li>
+              <a href="#">Outdoors</a>
+            </li>
+            <li>
+              <a href="#">Food & Drink</a>
+            </li>
+            <li>
+              <a href="#">Events</a>
+            </li>
+            <li>
+              <a href="#">Travel Info</a>
+            </li>
+          </ol>
+        </nav> */
+}
